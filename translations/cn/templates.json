@@ -1,0 +1,13 @@
+{
+    "reg_success": {
+        "welcome": "欢迎您，",
+        "congratulations": "恭喜，您已成功注册成为了osu!Kafuu的用户~",
+        "enjoy": "从现在开始愉快的玩耍吧！",
+        "registered_email": "请牢记您的注册邮箱：",
+        "userpage": "您的主页：",
+        "guide": "游玩攻略：",
+        "switcher": "服务器切换器：",
+        "any_question": "如果有什么疑问，欢迎您联系我们",
+        "system_message": "这是一封系统邮件，请您不要回复"
+    }
+}

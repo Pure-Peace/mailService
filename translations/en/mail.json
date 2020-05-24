@@ -1,0 +1,14 @@
+{
+    "errors": {
+        "connection": "sending server connection failed",
+        "authentication": "sending server authentication failed",
+        "sender_rejected": "the sender is rejected",
+        "recipient_rejected": "the recipient is rejected",
+        "data_reception_rejected": "rejection of data reception",
+        "service_unavailable": "mail service is temporarily unavailable"
+    },
+    "complete": {
+        "success": "email sent successfully, please check in your inbox.",
+        "failed": "email sending failed, "
+    }
+}

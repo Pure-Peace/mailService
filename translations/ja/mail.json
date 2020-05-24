@@ -1,0 +1,14 @@
+{
+    "errors": {
+        "connection": "送信サーバーの接続に失敗します",
+        "authentication": "送信サーバーの認証に失敗しました",
+        "sender_rejected": "作家は拒否されます",
+        "recipient_rejected": "受信者が拒否されます",
+        "data_reception_rejected": "データ受信拒否",
+        "service_unavailable": "レターサービスが一時的に利用できません"
+    },
+    "complete": {
+        "success": "正常に送信されたメールは、あなたのメールボックスをチェックしてください。",
+        "failed": "電子メールの送信に失敗しました、"
+    }
+}

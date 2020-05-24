@@ -1,0 +1,42 @@
+<div style="font-family: arial; padding: 5%; background-color: {{ theme_color[0] }}; height: 80%;">
+    <table cellpadding="0" align="center"
+           style="width: 740px; margin: 0px auto; text-align: left; position: relative; font-size: 14px; line-height: 1.5; box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15); border-collapse: collapse;">
+        <tbody>
+        <tr>
+            <th valign="middle"
+                style="padding: 35px; background-color: {{ theme_color[1] }}; border-radius:  4px 4px 0 0;">
+                <font size="4" style="color: rgb(255, 255, 255); ">osu!Kafuu [香风] - Special osu! server</font>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div style="padding: 30px 50px; background-color:#ffffff;">
+                    <h2>
+                        <font color="#333333" style="line-height: 20px; ">
+                            <font style="line-height: 22px; " size="4">
+                                {{ tran('templates.reg_success.welcome') }} {{ username }}!
+                            </font>
+                        </font>
+                    </h2>
+                    <p style="padding: 10px;">{{ tran('congratulations') }}<br>
+                        {{ tran('templates.reg_success.enjoy') }}<br><br>
+                        {{ tran('templates.reg_success.registered_email')}}<b>{{ usermail }}</b><br><br>
+                        {{ tran('templates.reg_success.userpage') }}<b><a style="color: {{ theme_color[2] }};" href="http://kafuu.pro/u/{{ username }}">https://kafuu.pro/u/{{ username }}</a></b><br>
+                        {{ tran('templates.reg_success.guide') }}<b><a style="color: {{ theme_color[2] }};" href="http://kafuu.pro/introduce">https://kafuu.pro/introduce</a></b><br>
+                        {{ tran('templates.reg_success.switcher') }}<b><a style="color: {{ theme_color[2] }};" href="http://kafuu.pro/switcher">https://kafuu.pro/switcher</a></b><br><br><br>
+                        {{ tran('templates.reg_success.any_question')}}<br><b>{{ adminmail }}</b></p>
+                    <p align="right"><b>osu!Kafuu Admin</b></p>
+                    <p align="right">{{ datetime }}</p>
+                    <div>
+                        <div style="padding: 15px; border-top:1px dashed #cccccc; color:#747474; line-height:1.3em; font-size:12px;">
+                            <p>{{ tran('templates.reg_success.system_message') }}<br>
+                            </p>
+                            <p>© osu!Kafuu 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

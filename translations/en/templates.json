@@ -1,0 +1,13 @@
+{
+    "reg_success": {
+        "welcome": "Welcome, ",
+        "congratulations":  "Congratulations, you have successfully registered as an osu!Kafuu user~",
+        "enjoy": "From now happy to enjoy it!",
+        "registered_email":"Please remember your registered email: ",
+        "userpage": "Your userpage: ",
+        "guide": "Play guide: ",
+        "switcher":  "Server switcher: ",
+        "any_question":  "If you have any questions, please contact us: ",
+        "system_message": "This is a system message, please do not reply"
+    }
+}

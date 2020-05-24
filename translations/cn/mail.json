@@ -1,0 +1,14 @@
+{
+   "errors": {
+       "connection": "发信服务器连接失败",
+       "authentication": "发信服务器认证失败",
+       "sender_rejected": "发信人被拒绝",
+       "recipient_rejected": "收信人被拒绝",
+       "data_reception_rejected": "数据接收拒绝",
+       "service_unavailable": "发信服务暂不可用"
+   },
+   "complete": {
+       "success": "邮件发送成功，请在您的邮箱查收。",
+       "failed": "邮件发送失败，"
+   }
+}
