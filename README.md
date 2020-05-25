@@ -96,42 +96,42 @@ http://localhost:8898/
 
 
 ## 多语言邮件，以及随机变换的邮件颜色（material颜色风格）
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p1.png)
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p2.png)
+![screenshot](http://otsu.fun/demos1/p1.png)
+![screenshot](http://otsu.fun/demos1/p2.png)
 
 ---
 
 ### 支持多语言的邮件模板系统（jinja2语法）
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p6.png)
+![screenshot](http://otsu.fun/demos1/p6.png)
 
 ---
 
 ### 使用简单，可添加多个发信服务器，支持SSL与一般端口（红框处）
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p4.png)
+![screenshot](http://otsu.fun/demos1/p4.png)
 
 ---
 
 ### 翻译器，默认语言为简体中文
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p5.png)
+![screenshot](http://otsu.fun/demos1/p5.png)
 
 ---
 
 ### json格式的多语言文件
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p7.png)
+![screenshot](http://otsu.fun/demos1/p7.png)
 
 ---
 
 ### 提供一个小工具，一键创建多国语言翻译（google translate）[makeTranslations.py]
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p8.png)
+![screenshot](http://otsu.fun/demos1/p8.png)
 
 ### 直接运行，自动创建翻译
 
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p9.png)
+![screenshot](http://otsu.fun/demos1/p9.png)
 
 ---
 
 ### 提供web接口调用演示（flask）
-![screenshot](https://github.com/Pure-Peace/mailService/blob/master/screenshot/p3.png)
+![screenshot](http://otsu.fun/demos1/p3.png)
 
 ---
 
