@@ -1,6 +1,6 @@
 # mailService
-基于python3的邮件服务。提供邮件模板系统、多语言、自动翻译、多邮件服务器以及微型web api示例。
-Mail service based on python3. Provide mail template system, multi-language, automatic translation, multi-mail server management and micro web api examples。
+基于python3的邮件服务(SMTP)。提供邮件模板系统、多语言、自动翻译、多邮件服务器以及微型web api示例。
+Mail service based on python3 (SMTP). Provide mail template system, multi-language, automatic translation, multi-mail server management and micro web api examples。
 
 ## 🍖Easy:
 
@@ -26,6 +26,9 @@ pip install -r requirements.txt
 ```
 
 3、**🍮Add mail server (emailManager.py)**
+
+添加你的SMTP发信服务器！
+
 ```python
 class EmailManager:
     def __init__(self, template_dir='templates', template_extension='.html', translator=None):
@@ -90,7 +93,7 @@ then open
 ```
 http://localhost:8898/
 ```
-
+lets try
 
 ## 📷Features Show:
 
@@ -110,9 +113,14 @@ http://localhost:8898/
 ### 2. 支持多语言的邮件模板系统（jinja2语法）
 
 与flask html基本相同的写法，红框处展示了多语言化功能，邮件发送的效果请看第1点的截图：`1. 多语言邮件，以及随机变换的邮件颜色（material颜色风格）`
+
 在`translations`目录中建立对应语言的翻译目录，并添加.json格式的翻译文件，即可像图片描述的一样调用多语言。
 
 而且，你可以在python能够达到的任何地方使用多语言，包括log等等，只要你添加翻译文件，并正确调用`translator`对象的`tran()`方法即可完成。
+
+调用模板发送邮件十分简单，你只需要调用`EmailManager`的`send_mail()`方法，并将`content`参数设为html模板的名称（如`reg_success`)，邮件系统会自动在`templates`目录下寻找对应的html邮件模板，并且渲染它。
+
+注意，如果要为你的html邮件模板添加数据，还需要传入`template_data`数据，是一个字典。
 
 ![screenshot](http://otsu.fun/demos1/p6.png)
 
