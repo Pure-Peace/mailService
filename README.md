@@ -118,13 +118,13 @@ The language of the e-mail can be selected by the webpage, determine the user's 
 
 ### 2. Email template system supporting multiple languages (jinja2 syntax)
 
-Basically the same writing as flask html, the multi-language function is shown in the red box, please see the screenshot of point 1 for the effect of email sending: `1. Multi-language email, and the randomly changed email color (material color style)
+Basically the same writing as flask html, the multi-language function is shown in the red box, please see the screenshot of point 1 for the effect of email sending: `1. Multi-language email, and the randomly changed email color (material color style)`
 
 Create a translation directory for the corresponding language in the `translations` directory, and add a translation file in .json format to call multiple languages as described in the picture.
 
 Moreover, you can use multiple languages wherever Python can reach it, as long as you add the translation file and call the `tran ()` method of the `translator` object correctly.
 
-Calling the template to send mail is very simple, you only need to call the send_mail () method of ʻEmailManager`, and set the `content` parameter to the name of the html template (such as` reg_success`), the mail system will automatically be in the `templates` directory Find the corresponding html mail template and render it.
+Calling the template to send mail is very simple, you only need to call the `send_mail()` method of `EmailManager`, and set the `content` parameter to the name of the html template (such as `reg_success`), the mail system will automatically be in the `templates` directory Find the corresponding html mail template and render it.
 
 Note that if you want to add data to your html mail template, you also need to pass in `template_data` data, which is a dictionary.
 
