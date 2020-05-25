@@ -95,45 +95,86 @@ http://localhost:8898/
 ## 📷Features Show:
 
 
-## 多语言邮件，以及随机变换的邮件颜色（material颜色风格）
+## 1. 多语言邮件，以及随机变换的邮件颜色（material颜色风格）
+
+这是关于邮件模板渲染的功能，位于`emailManager.py`中，我已经内置了几套配色
+
 ![screenshot](http://otsu.fun/demos1/p1.png)
+
+邮件的语言可由网页端选择，判断用户的语言，提交后端发送对应语言的邮件。
+
 ![screenshot](http://otsu.fun/demos1/p2.png)
 
 ---
 
-### 支持多语言的邮件模板系统（jinja2语法）
+### 2. 支持多语言的邮件模板系统（jinja2语法）
+
+与flask html基本相同的写法，红框处展示了多语言化功能，邮件发送的效果请看第1点的截图：`1. 多语言邮件，以及随机变换的邮件颜色（material颜色风格）`
+在`translations`目录中建立对应语言的翻译目录，并添加.json格式的翻译文件，即可像图片描述的一样调用多语言。
+
+而且，你可以在python能够达到的任何地方使用多语言，包括log等等，只要你添加翻译文件，并正确调用`translator`对象的`tran()`方法即可完成。
+
 ![screenshot](http://otsu.fun/demos1/p6.png)
 
 ---
 
-### 使用简单，可添加多个发信服务器，支持SSL与一般端口（红框处）
+### 3. 使用简单，可添加多个发信服务器，支持SSL与一般端口（红框处）
+
+添加服务器仅需按图上所描述的，实例化`MailServer`对象，加入列表即可
+`MailServer`对象十分简单，参见`mailServer.py`，主要是对发信服务器的一些配置。
+
+包含了回复地址`reply_address`，以及图上没有表示出来的`client_type`（用于指示是否ssl）
+还有一个重要的是`sender_name`，用户收到的邮件会显示这个名字。
+
 ![screenshot](http://otsu.fun/demos1/p4.png)
 
 ---
 
-### 翻译器，默认语言为简体中文
+### 4. 翻译器，默认语言为简体中文
+
+将`language`改为指定语言的英文缩写即可实现翻译，如果找不到指定语言的翻译，它会自动选择`default_language`语言，所以请务必保证`default_language`是完整的。
+同时，你需要在`translation`中增加翻译文件，来支持翻译器。
+下文提供了一个小工具，自动生成谷歌翻译的.json翻译文件。
+
 ![screenshot](http://otsu.fun/demos1/p5.png)
 
 ---
 
-### json格式的多语言文件
+### 5. json格式的多语言文件
+
+这个就是所谓的json翻译文件了，具体的调用方法请往上翻到第2点：`2. 支持多语言的邮件模板系统（jinja2语法）`。
+
 ![screenshot](http://otsu.fun/demos1/p7.png)
 
 ---
 
-### 提供一个小工具，一键创建多国语言翻译（google translate）[makeTranslations.py]
+### 6. 提供一个小工具，一键创建多国语言翻译（google translate）[makeTranslations.py]
+
+这个工具通过调用python的谷歌翻译api创建多语言翻译文件。
+首先你必须保证`translator.py`所配置的`language`所指定的语言完整，然后才可以使用这个工具。
+
+它会以`translator`对象的`language`为基本语言，然后根据基本语言的翻译文件生成其它语言的翻译文件。
+
+
 ![screenshot](http://otsu.fun/demos1/p8.png)
 
-### 直接运行，自动创建翻译
+编辑好`makeTranslations.py`，直接运行即可生成。极其简单
 
 ![screenshot](http://otsu.fun/demos1/p9.png)
 
 ---
 
-### 提供web接口调用演示（flask）
+### 8. 提供web接口调用演示（flask）[simpleApi.py]
+
+这个很简单，运行`simpleApi.py`就可以看到效果了
+
+比如访问`http://localhost:8898/send_mail/reg_success/youremail@email.com/test?lang=en`时，邮件服务会给用户`test <youremail@email.com>`发送一个以`reg_success`为模板，语言`lang=en`的注册成功邮件。
+
+这意味着，你可以轻易的根据用户的浏览器语言向其发送对应语言的邮件，只需要调用api即可。
+
 ![screenshot](http://otsu.fun/demos1/p3.png)
 
 ---
 
-
+enjoy
 
