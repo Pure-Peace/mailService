@@ -55,6 +55,9 @@ class EmailManager:
 ```
 
  4. **🌽try [send email]（main.py）**
+ 
+调用 `mailService.send_mail()`来发送邮件
+
  ```python
  class Handlers:
     def __init__(self):
