@@ -140,7 +140,7 @@ class EmailManager:
         temp.globals['tran'] = self.translator.tran
         template_data['theme_color'] = themes[choice(list(themes.keys()))]
         template_data['datetime'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ' GMT.'
-        template_data['adminmail'] = '940857703@qq.com'
+        template_data['adminmail'] = 'example@email.com'
         return temp.render(**template_data)
     
     
