@@ -190,7 +190,7 @@ def template_render(temp, translator, template_data={}):
     temp.globals['tran'] = translator.tran
     template_data['theme_color'] = themes[choice(list(themes.keys()))]
     template_data['datetime'] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ' GMT.'
-    template_data['adminmail'] = '940857703@qq.com'
+    template_data['adminmail'] = 'example@email.com'
     return temp.render(**template_data)
 
 
@@ -207,6 +207,6 @@ def reg_success(data, recipient, lang='cn'):
 
 if __name__ == '__main__':
     service = EmailManager()
-    reg_success({'username': 'PurePeace', 'usermail': '940857703@qq.com'}, '940857703@qq.com')
-    #reg_success({'username': 'PurePeace', 'usermail': '940857703@qq.com'}, '940857703@qq.com', 'en')
+    reg_success({'username': 'PurePeace', 'usermail': 'example@email.com'}, 'example@email.com')
+    #reg_success({'username': 'PurePeace', 'usermail': 'example@email.com'}, 'example@email.com', 'en')
     
